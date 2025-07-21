@@ -7,9 +7,10 @@ var cors = require("cors");
 const PORT = process.env.PORT || 4000;
 
 app.use(
-  cors({
-    origin: "*",
-  })
+ cors({
+		origin:"http://localhost:3000",
+		credentials:true,
+	})
 );
 // Middleware
 app.use(express.json());
